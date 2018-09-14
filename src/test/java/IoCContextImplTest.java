@@ -2,6 +2,8 @@ import org.junit.jupiter.api.Test;
 
 import javax.swing.*;
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class IoCContextImplTest {
@@ -13,6 +15,31 @@ public class IoCContextImplTest {
         MyBean myBeanInstance = context.getBean(MyBean.class);
 
         assertEquals(MyBean.class, myBeanInstance.getClass());
+    }
+
+    @Test
+    void should_get_two_time_after_AC1() {
+        IoCContext context = new IoCContextImpl();
+
+        context.registerBean(MyBean.class);
+        MyBean myBeanInstance = context.getBean(MyBean.class);
+        MyBean myBeanInstance2 = context.getBean(MyBean.class);
+
+        assertNotSame(myBeanInstance, myBeanInstance2);
+    }
+
+    @Test
+    void should_create_instance_for_two() {
+        IoCContext context = new IoCContextImpl();
+
+        context.registerBean(MyBean.class);
+        context.registerBean(String.class);
+        MyBean myBeanInstance = context.getBean(MyBean.class);
+        String stringInstance = context.getBean(String.class);
+
+        assertEquals(MyBean.class, myBeanInstance.getClass());
+        assertEquals(String.class, stringInstance.getClass());
+
     }
 
     @Test
@@ -41,20 +68,17 @@ public class IoCContextImplTest {
         IoCContextImpl cContext = new IoCContextImpl();
 
         cContext.registerBean(MyBean.class);
-        cContext.registerBean(MyBean.class);
 
-        MyBean myBeanInstance = cContext.getBean(MyBean.class);
-
-        assertEquals(MyBean.class, myBeanInstance.getClass());
+        assertDoesNotThrow(() -> cContext.registerBean(MyBean.class));
     }
 
     @Test
     void should_throw_when_not_have_default_constructor_AC4() {
         IoCContext context = new IoCContextImpl();
         try {
-            context.registerBean(ArrayList.class);
+            context.registerBean(Array.class);
         } catch (Exception e) {
-            assertEquals("beanClazz is mandatory", e.getMessage());
+            assertEquals("java.lang.reflect.Array has no default constructor", e.getMessage());
         }
     }
 
@@ -76,9 +100,9 @@ public class IoCContextImplTest {
         IoCContextImpl context = new IoCContextImpl();
 
         context.registerBean(MyBean.class);
-        Class expectedType = IllegalArgumentException.class;
+        Class expectedType = IllegalStateException.class;
         try {
-            MyBean myBean = context.getBean(null);
+            context.getBean(String.class);
         } catch (Exception e) {
             assertEquals(expectedType, e.getClass());
         }
@@ -103,7 +127,7 @@ public class IoCContextImplTest {
         context.registerBean(MyBean.class);
         context.getBean(MyBean.class);
         try {
-            context.registerBean(MyBean.class);
+            context.registerBean(String.class);
         } catch (Exception e) {
             assertEquals(IllegalStateException.class, e.getClass());
         }

@@ -7,23 +7,32 @@ public class IoCContextImpl implements IoCContext {
     @Override
     public void registerBean(Class<?> beanClazz) {
         if (isClose) throw new IllegalStateException();
+
         if (beanClazz == null) {
             String message = "beanClazz is mandatory";
             throw new IllegalArgumentException(message);
         }
+
+        String name = beanClazz.getName();
+        
         try {
-            if (!this.instances.containsKey(beanClazz.getName())) {
-                this.instances.put(beanClazz.getName(), beanClazz.newInstance());
+            if (!this.instances.containsKey(name)) {
+                this.instances.put(name, beanClazz.newInstance());
             };
         } catch (IllegalAccessException e) {
-            String message = beanClazz.getName() + " has no default constructor";
+            String message = name + " has no default constructor";
             throw new IllegalArgumentException(message);
         } catch (InstantiationException e) {
-            String message = beanClazz.getName() + " is abstract";
+            String message = name + " is abstract";
             throw new IllegalArgumentException(message);
         } catch (Exception e) {
             throw e;
         }
+    }
+
+    @Override
+    public <T> void registerBean(Class<? super T> resolveClazz, Class<T> beanClazz) {
+
     }
 
     @Override
@@ -36,6 +45,11 @@ public class IoCContextImpl implements IoCContext {
 
         if (!this.instances.containsKey(name)) throw new IllegalStateException();
 
-        return (T)instances.get(name);
+        try {
+            return (T) instances.get(name).getClass().newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }
