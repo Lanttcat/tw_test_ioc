@@ -1,7 +1,11 @@
+import com.sun.org.apache.xpath.internal.operations.Mod;
+
+import java.lang.reflect.Modifier;
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class IoCContextImpl implements IoCContext {
-    static HashMap<String, Object> instances = new HashMap<>();
+    static HashSet<Class> instances = new HashSet<>();
     private boolean isClose = false;
 
     @Override
@@ -14,19 +18,18 @@ public class IoCContextImpl implements IoCContext {
         }
 
         String name = beanClazz.getName();
-        
-        try {
-            if (!this.instances.containsKey(name)) {
-                this.instances.put(name, beanClazz.newInstance());
-            };
-        } catch (IllegalAccessException e) {
-            String message = name + " has no default constructor";
-            throw new IllegalArgumentException(message);
-        } catch (InstantiationException e) {
+
+        if(Modifier.isAbstract(beanClazz.getModifiers())) {
             String message = name + " is abstract";
             throw new IllegalArgumentException(message);
-        } catch (Exception e) {
-            throw e;
+        }
+        try {
+            beanClazz.getConstructor();
+            this.instances.add(beanClazz.getClass());
+        } catch (NoSuchMethodException e) {
+
+            String message = name + " has no default constructor";
+            throw new IllegalArgumentException(message);
         }
     }
 
@@ -41,12 +44,12 @@ public class IoCContextImpl implements IoCContext {
 
         if (resolveClazz == null) throw new IllegalArgumentException();
 
-        String name = resolveClazz.getName();
+        Class className = resolveClazz.getClass();
 
-        if (!this.instances.containsKey(name)) throw new IllegalStateException();
+        if (!this.instances.contains(className)) throw new IllegalStateException();
 
         try {
-            return (T) instances.get(name).getClass().newInstance();
+            return resolveClazz.newInstance();
         } catch (Exception e) {
             e.printStackTrace();
             return null;
