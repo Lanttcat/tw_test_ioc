@@ -1,12 +1,11 @@
-import com.sun.org.apache.xpath.internal.operations.Mod;
-
-import java.lang.annotation.Annotation;
+import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
+import java.util.List;
 
 public class IoCContextImpl implements IoCContext {
-    static HashMap<Class, Class> instances = new HashMap<>();
+    static HashMap<Class, Class> classStorage = new HashMap<>();
     private boolean isClose = false;
 
     @Override
@@ -23,7 +22,7 @@ public class IoCContextImpl implements IoCContext {
         }
         try {
             beanClazz.getConstructor();
-            this.instances.put(beanClazz, null);
+            this.classStorage.put(beanClazz, null);
         } catch (NoSuchMethodException e) {
             String message = name + " has no default constructor";
             throw new IllegalArgumentException(message);
@@ -35,29 +34,44 @@ public class IoCContextImpl implements IoCContext {
         if (isClose) throw new IllegalStateException();
         isNullClass(resolveClazz == null || beanClazz == null);
 
-        this.instances.put(resolveClazz, beanClazz);
+        this.classStorage.put(resolveClazz, beanClazz);
 
     }
 
     @Override
     public <T> T getBean(Class<? super T> resolveClazz) {
+        T instance;
+
         if (!isClose) isClose = true;
 
         if (resolveClazz == null) throw new IllegalArgumentException();
 
-        if (!this.instances.containsKey(resolveClazz)) throw new IllegalStateException();
-
-
+        if (!this.classStorage.containsKey(resolveClazz)) throw new IllegalStateException();
         try {
             if (isAnAbstractClass(resolveClazz)) {
-                return (T)this.instances.get(resolveClazz).newInstance();
+                instance = (T)this.classStorage.get(resolveClazz).newInstance();
             } else {
-                return (T)resolveClazz.newInstance();
+                instance = (T)resolveClazz.newInstance();
             }
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
+
+        Field[] fields = resolveClazz.getDeclaredFields();
+        for (Field field : fields) {
+            if (field.getAnnotation(CreateOnTheFly.class) != null) {
+                Class<?> classType = field.getType();
+                if (!this.classStorage.containsKey(classType)) throw new IllegalStateException();
+                try {
+                    field.setAccessible(true);
+                    field.set(instance, classType.newInstance());
+                } catch (IllegalAccessException | InstantiationException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return instance;
     }
 
     private void isNullClass(boolean b) {

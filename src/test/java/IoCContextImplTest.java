@@ -1,15 +1,12 @@
-import com.sun.tools.classfile.Dependency;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import javax.swing.*;
+import java.lang.management.MemoryManagerMXBean;
+import java.lang.reflect.Array;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-
 public class IoCContextImplTest {
-    IoCContext context = new IoCContextImpl();
+    IoCContextImpl context = new IoCContextImpl();
     @Test
     void should_create_instance_for_ioc_AC1() {
         context.registerBean(MyBean.class);
@@ -152,6 +149,19 @@ public class IoCContextImplTest {
 
         MyBeanClass myBeanClass = context.getBean(MyBeanClass.class);
 
-        assertSame(MyBeanClass.class, myBeanClass.getClass());
+        assertSame(MyDependency.class, myBeanClass.getMyDependency().getClass());
+    }
+
+    @Test
+    void should_throw_when_have_annotion_but_not_register() {
+        context.registerBean(MyBeanClass.class);
+        context.registerBean(MyDependency.class);
+
+        try {
+            MyBeanClass myBeanClass = context.getBean(MyBeanClass.class);
+        } catch (Exception e) {
+            assertSame(IllegalStateException.class, e.getClass());
+        }
+
     }
 }
