@@ -1,33 +1,30 @@
 import com.sun.org.apache.xpath.internal.operations.Mod;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.HashSet;
 
 public class IoCContextImpl implements IoCContext {
-    static HashSet<Class> instances = new HashSet<>();
+    static HashMap<Class, Class> instances = new HashMap<>();
     private boolean isClose = false;
 
     @Override
     public void registerBean(Class<?> beanClazz) {
         if (isClose) throw new IllegalStateException();
 
-        if (beanClazz == null) {
-            String message = "beanClazz is mandatory";
-            throw new IllegalArgumentException(message);
-        }
+        isNullClass(beanClazz == null);
 
         String name = beanClazz.getName();
 
-        if(Modifier.isAbstract(beanClazz.getModifiers())) {
+        if(isAnAbstractClass(beanClazz)) {
             String message = name + " is abstract";
             throw new IllegalArgumentException(message);
         }
         try {
             beanClazz.getConstructor();
-            this.instances.add(beanClazz.getClass());
+            this.instances.put(beanClazz, null);
         } catch (NoSuchMethodException e) {
-
             String message = name + " has no default constructor";
             throw new IllegalArgumentException(message);
         }
@@ -35,24 +32,42 @@ public class IoCContextImpl implements IoCContext {
 
     @Override
     public <T> void registerBean(Class<? super T> resolveClazz, Class<T> beanClazz) {
+        if (isClose) throw new IllegalStateException();
+        isNullClass(resolveClazz == null || beanClazz == null);
+
+        this.instances.put(resolveClazz, beanClazz);
 
     }
 
     @Override
-    public <T> T getBean(Class<T> resolveClazz) {
+    public <T> T getBean(Class<? super T> resolveClazz) {
         if (!isClose) isClose = true;
 
         if (resolveClazz == null) throw new IllegalArgumentException();
 
-        Class className = resolveClazz.getClass();
+        if (!this.instances.containsKey(resolveClazz)) throw new IllegalStateException();
 
-        if (!this.instances.contains(className)) throw new IllegalStateException();
 
         try {
-            return resolveClazz.newInstance();
+            if (isAnAbstractClass(resolveClazz)) {
+                return (T)this.instances.get(resolveClazz).newInstance();
+            } else {
+                return (T)resolveClazz.newInstance();
+            }
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
+    }
+
+    private void isNullClass(boolean b) {
+        if (b) {
+            String message = "beanClazz is mandatory";
+            throw new IllegalArgumentException(message);
+        }
+    }
+
+    private boolean isAnAbstractClass(Class<?> beanClazz) {
+        return Modifier.isAbstract(beanClazz.getModifiers());
     }
 }
