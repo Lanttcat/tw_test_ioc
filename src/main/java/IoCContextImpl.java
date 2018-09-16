@@ -23,7 +23,7 @@ public class IoCContextImpl implements IoCContext {
         }
         try {
             beanClazz.getConstructor();
-            this.classStorage.put(beanClazz, null);
+            classStorage.put(beanClazz, null);
         } catch (NoSuchMethodException e) {
             String message = name + " has no default constructor";
             throw new IllegalArgumentException(message);
@@ -35,7 +35,7 @@ public class IoCContextImpl implements IoCContext {
         if (isClose) throw new IllegalStateException();
         isNullClass(resolveClazz == null || beanClazz == null);
 
-        this.classStorage.put(resolveClazz, beanClazz);
+        classStorage.put(resolveClazz, beanClazz);
 
     }
 
@@ -48,7 +48,7 @@ public class IoCContextImpl implements IoCContext {
 
         if (resolveClazz == null) throw new IllegalArgumentException();
 
-        if (!this.classStorage.containsKey(resolveClazz)) throw new IllegalStateException();
+        if (!classStorage.containsKey(resolveClazz)) throw new IllegalStateException();
 
         try {
             if (isAnAbstractClass(resolveClazz)) {
@@ -65,7 +65,7 @@ public class IoCContextImpl implements IoCContext {
         List<Field> fields = getFields(resolveClazz);
 
         addInstanceForExtend(instance, fields);
-        this.beanContainer.putToInstance(resolveClazz, instance);
+        beanContainer.putToInstance(resolveClazz, instance);
         return instance;
     }
 
@@ -73,7 +73,7 @@ public class IoCContextImpl implements IoCContext {
         for (Field field : fields) {
             if (field.getAnnotation(CreateOnTheFly.class) != null) {
                 Class<?> classType = field.getType();
-                if (!this.classStorage.containsKey(classType)) throw new IllegalStateException();
+                if (!classStorage.containsKey(classType)) throw new IllegalStateException();
                 try {
                     field.setAccessible(true);
                     field.set(instance, classType.newInstance());
@@ -109,7 +109,7 @@ public class IoCContextImpl implements IoCContext {
 
     @Override
     public void close() throws Exception {
-        HashMap<Class, List<Object>> reverse = this.beanContainer.reverseInstance();
+        HashMap<Class, List<Object>> reverse = beanContainer.reverseInstance();
 
         List<Exception> exceptions = new ArrayList<>();
 

@@ -226,6 +226,7 @@ public class IoCContextImplTest {
         } catch (Exception e) {}
     }
 
+
     @Test
     void should_finish_when_some_close_have_error() {
         context.registerBean(ClosableStateReference.class);
