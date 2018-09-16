@@ -153,7 +153,44 @@ public class IoCContextImplTest {
     }
 
     @Test
-    void should_throw_when_have_annotion_but_not_register() {
+    void should_throw_when_have_annotation_but_not_register() {
+        context.registerBean(MyBeanClass.class);
+
+        try {
+            MyBeanClass myBeanClass = context.getBean(MyBeanClass.class);
+        } catch (Exception e) {
+            assertSame(IllegalStateException.class, e.getClass());
+        }
+
+    }
+
+    @Test
+    void should_find_all_dependency_when_have_parent() {
+        context.registerBean(MyBeanClassChild.class);
+        context.registerBean(MyDependency.class);
+        context.registerBean(MyDependencyChild.class);
+
+        MyBeanClassChild myBeanClassChild = context.getBean(MyBeanClassChild.class);
+
+        assertSame(MyDependency.class, myBeanClassChild.getMyDependency().getClass());
+        assertSame(MyDependencyChild.class, myBeanClassChild.getMyDependencyChild().getClass());
+
+    }
+
+    @Test
+    void should_throw_when_have_no_child_annotation_but_not_register() {
+        context.registerBean(MyBeanClassChild.class);
+
+        try {
+            MyBeanClass myBeanClass = context.getBean(MyBeanClass.class);
+        } catch (Exception e) {
+            assertSame(IllegalStateException.class, e.getClass());
+        }
+
+    }
+
+    @Test
+    void should_throw_when_have_one_annotation_but_not_register() {
         context.registerBean(MyBeanClass.class);
         context.registerBean(MyDependency.class);
 

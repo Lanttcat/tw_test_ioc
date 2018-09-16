@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b40e55d4-de1b-46dd-b068-906daf612ff6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CreateOnTheFly.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MyBeanClassChild.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MyDependencyChild.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/IoCContextImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/IoCContextImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/CreateOnTheFly.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/classes/IoCContextImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/IoCContextImplTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/MyBeanClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/MyBeanClass.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/IoCContextImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IoCContextImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CreateOnTheFly.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/IoCContextImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IoCContextImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MyBeanClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyBeanClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MyDependency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyDependency.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -32,36 +29,37 @@
     <session id="-1919756361">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gradle" value="9" />
           <entry key="gradlew" value="1" />
-          <entry key="java" value="498" />
+          <entry key="java" value="555" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Groovy" value="9" />
-          <entry key="JAVA" value="498" />
+          <entry key="JAVA" value="555" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="21" />
-          <entry key="java" value="4479" />
+          <entry key="java" value="4922" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4479" />
+          <entry key="JAVA" value="4922" />
           <entry key="PLAIN_TEXT" value="21" />
         </counts>
       </usages-collector>
@@ -72,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/IoCContextImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5776">
-              <caret line="152" column="56" lean-forward="true" selection-start-line="152" selection-start-column="56" selection-end-line="152" selection-end-column="56" />
+            <state relative-caret-position="630">
+              <caret line="194" column="35" selection-start-line="194" selection-start-column="35" selection-end-line="194" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -433,9 +431,11 @@
         <option value="$PROJECT_DIR$/src/test/java/CreateOnTheFly.java" />
         <option value="$PROJECT_DIR$/src/main/java/CreateOnTheFly.java" />
         <option value="$PROJECT_DIR$/src/test/java/MyDependency.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MyDependencyChild.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MyBeanClassChild.java" />
         <option value="$PROJECT_DIR$/src/test/java/MyBeanClass.java" />
-        <option value="$PROJECT_DIR$/src/test/java/IoCContextImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/IoCContextImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/IoCContextImplTest.java" />
       </list>
     </option>
   </component>
@@ -446,9 +446,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="22" />
-    <option name="width" value="1389" />
-    <option name="height" value="878" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -527,7 +526,7 @@
     <property name="SearchEverywhereHistoryKey" value="Optiona&#9;PSI&#9;JAVA://java.util.Optional&#10;g&#9;FILE&#9;file:///Users/yxlan/Documents/Code/demo/tw_test_ioc/src/main/java/Greeting.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537031620053" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537098908747" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="full.screen.before.presentation.mode" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
@@ -560,27 +559,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.IoCContextImplTest.should_throw_when_have_annotion_but_not_register">
+  <component name="RunManager" selected="JUnit.IoCContextImplTest.should_throw_when_have_one_annotation_but_not_register">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IoCContextImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IoCContextImplTest.should_find_all_dependency_when_have_parent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test_test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="IoCContextImplTest" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IoCContextImplTest.should_create_instance_for_ioc_AC1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test_test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IoCContextImplTest" />
-      <option name="METHOD_NAME" value="should_create_instance_for_ioc_AC1" />
+      <option name="METHOD_NAME" value="should_find_all_dependency_when_have_parent" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -598,22 +588,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IoCContextImplTest.should_get_two_time_after_AC1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IoCContextImplTest.should_throw_when_have_annotation_but_not_register" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test_test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="IoCContextImplTest" />
-      <option name="METHOD_NAME" value="should_get_two_time_after_AC1" />
+      <option name="METHOD_NAME" value="should_throw_when_have_annotation_but_not_register" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IoCContextImplTest.should_throw_when_have_annotion_but_not_register" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IoCContextImplTest.should_throw_when_have_child_annotation_but_not_register" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test_test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="IoCContextImplTest" />
-      <option name="METHOD_NAME" value="should_throw_when_have_annotion_but_not_register" />
+      <option name="METHOD_NAME" value="should_throw_when_have_child_annotation_but_not_register" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IoCContextImplTest.should_throw_when_have_one_annotation_but_not_register" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test_test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="IoCContextImplTest" />
+      <option name="METHOD_NAME" value="should_throw_when_have_one_annotation_but_not_register" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -635,19 +636,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.IoCContextImplTest" />
-      <item itemvalue="JUnit.IoCContextImplTest.should_create_instance_for_ioc_AC1" />
-      <item itemvalue="JUnit.IoCContextImplTest.should_get_two_time_after_AC1" />
       <item itemvalue="JUnit.IoCContextImplTest.should_find_dependency_when_have_create_on_the_fly" />
-      <item itemvalue="JUnit.IoCContextImplTest.should_throw_when_have_annotion_but_not_register" />
+      <item itemvalue="JUnit.IoCContextImplTest.should_throw_when_have_annotation_but_not_register" />
+      <item itemvalue="JUnit.IoCContextImplTest.should_find_all_dependency_when_have_parent" />
+      <item itemvalue="JUnit.IoCContextImplTest.should_throw_when_have_child_annotation_but_not_register" />
+      <item itemvalue="JUnit.IoCContextImplTest.should_throw_when_have_one_annotation_but_not_register" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.IoCContextImplTest.should_throw_when_have_annotion_but_not_register" />
+        <item itemvalue="JUnit.IoCContextImplTest.should_throw_when_have_one_annotation_but_not_register" />
+        <item itemvalue="JUnit.IoCContextImplTest.should_throw_when_have_annotation_but_not_register" />
+        <item itemvalue="JUnit.IoCContextImplTest.should_throw_when_have_child_annotation_but_not_register" />
+        <item itemvalue="JUnit.IoCContextImplTest.should_find_all_dependency_when_have_parent" />
         <item itemvalue="JUnit.IoCContextImplTest.should_find_dependency_when_have_create_on_the_fly" />
-        <item itemvalue="JUnit.IoCContextImplTest" />
-        <item itemvalue="JUnit.IoCContextImplTest.should_get_two_time_after_AC1" />
-        <item itemvalue="JUnit.IoCContextImplTest.should_create_instance_for_ioc_AC1" />
       </list>
     </recent_temporary>
   </component>
@@ -664,44 +665,46 @@
       <workItem from="1536906051930" duration="411000" />
       <workItem from="1536906488702" duration="15209000" />
       <workItem from="1536980065961" duration="840000" />
-      <workItem from="1537002433021" duration="9244000" />
+      <workItem from="1537002433021" duration="10041000" />
+      <workItem from="1537097154163" duration="897000" />
+      <workItem from="1537098267147" duration="586000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="IoCContextImplTest_should_find_dependency_when_have_create_on_the_fly - 2018.09.16 at 00h 36m 56s.xml">
-      <configuration name="IoCContextImplTest.should_find_dependency_when_have_create_on_the_fly" configurationId="JUnit" />
+    <history-entry file="IoCContextImplTest_should_find_all_dependency_when_have_parent - 2018.09.16 at 19h 50m 36s.xml">
+      <configuration name="IoCContextImplTest.should_find_all_dependency_when_have_parent" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IoCContextImplTest_should_find_dependency_when_have_create_on_the_fly - 2018.09.16 at 00h 42m 26s.xml">
-      <configuration name="IoCContextImplTest.should_find_dependency_when_have_create_on_the_fly" configurationId="JUnit" />
+    <history-entry file="IoCContextImplTest_should_find_all_dependency_when_have_parent - 2018.09.16 at 19h 51m 30s.xml">
+      <configuration name="IoCContextImplTest.should_find_all_dependency_when_have_parent" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IoCContextImplTest_should_find_dependency_when_have_create_on_the_fly - 2018.09.16 at 00h 59m 39s.xml">
-      <configuration name="IoCContextImplTest.should_find_dependency_when_have_create_on_the_fly" configurationId="JUnit" />
+    <history-entry file="IoCContextImplTest_should_find_all_dependency_when_have_parent - 2018.09.16 at 19h 51m 42s.xml">
+      <configuration name="IoCContextImplTest.should_find_all_dependency_when_have_parent" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IoCContextImplTest_should_find_dependency_when_have_create_on_the_fly - 2018.09.16 at 01h 02m 04s.xml">
-      <configuration name="IoCContextImplTest.should_find_dependency_when_have_create_on_the_fly" configurationId="JUnit" />
+    <history-entry file="IoCContextImplTest_should_throw_when_have_child_annotation_but_not_register - 2018.09.16 at 19h 52m 51s.xml">
+      <configuration name="IoCContextImplTest.should_throw_when_have_child_annotation_but_not_register" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IoCContextImplTest_should_find_dependency_when_have_create_on_the_fly - 2018.09.16 at 01h 02m 32s.xml">
-      <configuration name="IoCContextImplTest.should_find_dependency_when_have_create_on_the_fly" configurationId="JUnit" />
+    <history-entry file="IoCContextImplTest_should_throw_when_have_annotation_but_not_register - 2018.09.16 at 19h 53m 11s.xml">
+      <configuration name="IoCContextImplTest.should_throw_when_have_annotation_but_not_register" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IoCContextImplTest_should_find_dependency_when_have_create_on_the_fly - 2018.09.16 at 01h 03m 24s.xml">
-      <configuration name="IoCContextImplTest.should_find_dependency_when_have_create_on_the_fly" configurationId="JUnit" />
+    <history-entry file="IoCContextImplTest_should_throw_when_have_annotation_but_not_register - 2018.09.16 at 19h 53m 19s.xml">
+      <configuration name="IoCContextImplTest.should_throw_when_have_annotation_but_not_register" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IoCContextImplTest_should_find_dependency_when_have_create_on_the_fly - 2018.09.16 at 01h 03m 40s.xml">
-      <configuration name="IoCContextImplTest.should_find_dependency_when_have_create_on_the_fly" configurationId="JUnit" />
+    <history-entry file="IoCContextImplTest_should_throw_when_have_annotation_but_not_register - 2018.09.16 at 19h 53m 23s.xml">
+      <configuration name="IoCContextImplTest.should_throw_when_have_annotation_but_not_register" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IoCContextImplTest_should_find_dependency_when_have_create_on_the_fly - 2018.09.16 at 01h 03m 59s.xml">
-      <configuration name="IoCContextImplTest.should_find_dependency_when_have_create_on_the_fly" configurationId="JUnit" />
+    <history-entry file="IoCContextImplTest_should_throw_when_have_annotation_but_not_register - 2018.09.16 at 19h 53m 27s.xml">
+      <configuration name="IoCContextImplTest.should_throw_when_have_annotation_but_not_register" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IoCContextImplTest_should_find_dependency_when_have_create_on_the_fly - 2018.09.16 at 01h 06m 10s.xml">
-      <configuration name="IoCContextImplTest.should_find_dependency_when_have_create_on_the_fly" configurationId="JUnit" />
+    <history-entry file="IoCContextImplTest_should_throw_when_have_annotation_but_not_register - 2018.09.16 at 19h 53m 42s.xml">
+      <configuration name="IoCContextImplTest.should_throw_when_have_annotation_but_not_register" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IoCContextImplTest_should_find_dependency_when_have_create_on_the_fly - 2018.09.16 at 01h 07m 31s.xml">
-      <configuration name="IoCContextImplTest.should_find_dependency_when_have_create_on_the_fly" configurationId="JUnit" />
+    <history-entry file="IoCContextImplTest_should_throw_when_have_annotation_but_not_register - 2018.09.16 at 19h 53m 46s.xml">
+      <configuration name="IoCContextImplTest.should_throw_when_have_annotation_but_not_register" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25704000" />
+    <option name="totallyTimeSpent" value="27984000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -717,7 +720,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.3288889" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.3288889" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.3288889" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -791,12 +794,6 @@
           <line>36</line>
           <properties />
           <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/IoCContextImpl.java</url>
-          <line>67</line>
-          <properties />
-          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -993,9 +990,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1024,37 +1018,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MyDependencyChild.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MyBeanClassChild.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#103#104#0" expanded="true" />
+            <element signature="e#143#144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/MyBeanClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+        <state relative-caret-position="76">
+          <caret line="2" column="18" selection-start-line="1" selection-end-line="3" />
           <folding>
+            <element signature="e#101#102#0" expanded="true" />
             <element signature="e#136#137#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.2.0/bf6544529adb99bb5b81454f44ab69f5935be4af/junit-platform-commons-1.2.0-sources.jar!/org/junit/platform/commons/util/ReflectionUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="515" selection-start-line="515" selection-end-line="515" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/IoCContextImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+        <state relative-caret-position="226">
+          <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.2.0/bf6544529adb99bb5b81454f44ab69f5935be4af/junit-platform-commons-1.2.0-sources.jar!/org/junit/platform/commons/util/ReflectionUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="512" selection-start-line="512" selection-end-line="512" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/IoCContextImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5776">
-          <caret line="152" column="56" lean-forward="true" selection-start-line="152" selection-start-column="56" selection-end-line="152" selection-end-column="56" />
+        <state relative-caret-position="630">
+          <caret line="194" column="35" selection-start-line="194" selection-start-column="35" selection-end-line="194" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

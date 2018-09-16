@@ -1,8 +1,8 @@
+import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class IoCContextImpl implements IoCContext {
     static HashMap<Class, Class> classStorage = new HashMap<>();
@@ -41,6 +41,7 @@ public class IoCContextImpl implements IoCContext {
     @Override
     public <T> T getBean(Class<? super T> resolveClazz) {
         T instance;
+        Class superClass;
 
         if (!isClose) isClose = true;
 
@@ -58,7 +59,14 @@ public class IoCContextImpl implements IoCContext {
             return null;
         }
 
-        Field[] fields = resolveClazz.getDeclaredFields();
+        List<Field> fields = new ArrayList<>();
+        superClass = resolveClazz;
+        while (superClass != Object.class) {
+            fields.addAll(Arrays.asList(superClass.getDeclaredFields()));
+            superClass = superClass.getSuperclass();
+        }
+        Collections.reverse(fields);
+
         for (Field field : fields) {
             if (field.getAnnotation(CreateOnTheFly.class) != null) {
                 Class<?> classType = field.getType();

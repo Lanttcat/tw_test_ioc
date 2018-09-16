@@ -1,10 +1,10 @@
 public class MyBeanClass implements MyBeanClassInterface {
+    @CreateOnTheFly
+    private MyDependency myDependency;
+
     public MyDependency getMyDependency() {
         return myDependency;
     }
-
-    @CreateOnTheFly
-    private MyDependency myDependency;
 
     @Override
     public void test() {
