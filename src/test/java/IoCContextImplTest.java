@@ -201,4 +201,17 @@ public class IoCContextImplTest {
         }
 
     }
+
+    @Test
+    void should_run_close_when_ioc_close() {
+        context.registerBean(MyBeanClass.class);
+        context.registerBean(MyDependency.class);
+
+        try {
+            MyBeanClass myBeanClass = context.getBean(MyBeanClass.class);
+        } catch (Exception e) {
+            assertSame(IllegalStateException.class, e.getClass());
+        }
+
+    }
 }

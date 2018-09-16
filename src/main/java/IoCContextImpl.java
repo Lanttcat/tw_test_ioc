@@ -5,7 +5,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class IoCContextImpl implements IoCContext {
-    static HashMap<Class, Class> classStorage = new HashMap<>();
+    private static HashMap<Class, Class> classStorage = new BeanContainer().getContainer();
     private boolean isClose = false;
 
     @Override

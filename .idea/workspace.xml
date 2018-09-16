@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b40e55d4-de1b-46dd-b068-906daf612ff6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/BeanContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/IoCContextImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/IoCContextImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/IoCContextImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IoCContextImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/IoCContextImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IoCContextImplTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -34,25 +38,25 @@
         <counts>
           <entry key="gradle" value="9" />
           <entry key="gradlew" value="1" />
-          <entry key="java" value="569" />
+          <entry key="java" value="587" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Groovy" value="9" />
-          <entry key="JAVA" value="569" />
+          <entry key="JAVA" value="587" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="21" />
-          <entry key="java" value="4948" />
+          <entry key="java" value="5132" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4948" />
+          <entry key="JAVA" value="5132" />
           <entry key="PLAIN_TEXT" value="21" />
         </counts>
       </usages-collector>
@@ -63,8 +67,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/IoCContextImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="723">
-              <caret line="132" column="36" lean-forward="true" selection-start-line="132" selection-start-column="36" selection-end-line="132" selection-end-column="36" />
+            <state relative-caret-position="498">
+              <caret line="206" selection-start-line="206" selection-end-line="206" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -426,9 +430,10 @@
         <option value="$PROJECT_DIR$/src/test/java/MyDependencyChild.java" />
         <option value="$PROJECT_DIR$/src/test/java/MyBeanClassChild.java" />
         <option value="$PROJECT_DIR$/src/test/java/MyBeanClass.java" />
-        <option value="$PROJECT_DIR$/src/test/java/IoCContextImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/IoCContext.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BeanContainer.java" />
         <option value="$PROJECT_DIR$/src/main/java/IoCContextImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/IoCContextImplTest.java" />
       </list>
     </option>
   </component>
@@ -519,7 +524,7 @@
     <property name="SearchEverywhereHistoryKey" value="Optiona&#9;PSI&#9;JAVA://java.util.Optional&#10;g&#9;FILE&#9;file:///Users/yxlan/Documents/Code/demo/tw_test_ioc/src/main/java/Greeting.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537099645283" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537100705611" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="full.screen.before.presentation.mode" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
@@ -658,29 +663,11 @@
       <workItem from="1536980065961" duration="840000" />
       <workItem from="1537002433021" duration="10041000" />
       <workItem from="1537097154163" duration="897000" />
-      <workItem from="1537098267147" duration="1120000" />
+      <workItem from="1537098267147" duration="2089000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="IoCContextImplTest_should_find_all_dependency_when_have_parent - 2018.09.16 at 19h 51m 42s.xml">
-      <configuration name="IoCContextImplTest.should_find_all_dependency_when_have_parent" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IoCContextImplTest_should_throw_when_have_child_annotation_but_not_register - 2018.09.16 at 19h 52m 51s.xml">
-      <configuration name="IoCContextImplTest.should_throw_when_have_child_annotation_but_not_register" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IoCContextImplTest_should_throw_when_have_annotation_but_not_register - 2018.09.16 at 19h 53m 11s.xml">
-      <configuration name="IoCContextImplTest.should_throw_when_have_annotation_but_not_register" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IoCContextImplTest_should_throw_when_have_annotation_but_not_register - 2018.09.16 at 19h 53m 19s.xml">
-      <configuration name="IoCContextImplTest.should_throw_when_have_annotation_but_not_register" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IoCContextImplTest_should_throw_when_have_annotation_but_not_register - 2018.09.16 at 19h 53m 23s.xml">
-      <configuration name="IoCContextImplTest.should_throw_when_have_annotation_but_not_register" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IoCContextImplTest_should_throw_when_have_annotation_but_not_register - 2018.09.16 at 19h 53m 27s.xml">
-      <configuration name="IoCContextImplTest.should_throw_when_have_annotation_but_not_register" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="IoCContextImplTest_should_throw_when_have_annotation_but_not_register - 2018.09.16 at 19h 53m 42s.xml">
       <configuration name="IoCContextImplTest.should_throw_when_have_annotation_but_not_register" configurationId="JUnit" />
     </history-entry>
@@ -693,9 +680,27 @@
     <history-entry file="IoCContextImplTest - 2018.09.16 at 19h 59m 08s.xml">
       <configuration name="IoCContextImplTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="IoCContextImplTest_should_create_instance_by_interface - 2018.09.16 at 20h 05m 23s.xml">
+      <configuration name="IoCContextImplTest.should_create_instance_by_interface" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IoCContextImplTest_should_use_after_class_when_have_repair_class - 2018.09.16 at 20h 07m 09s.xml">
+      <configuration name="IoCContextImplTest.should_use_after_class_when_have_repair_class" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IoCContextImplTest - 2018.09.16 at 20h 07m 14s.xml">
+      <configuration name="IoCContextImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IoCContextImplTest - 2018.09.16 at 20h 11m 15s.xml">
+      <configuration name="IoCContextImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IoCContextImplTest - 2018.09.16 at 20h 16m 36s.xml">
+      <configuration name="IoCContextImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IoCContextImplTest - 2018.09.16 at 20h 16m 55s.xml">
+      <configuration name="IoCContextImplTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28518000" />
+    <option name="totallyTimeSpent" value="29487000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1045,22 +1050,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/IoCContextImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/BeanContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="56" column="32" lean-forward="true" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+        <state relative-caret-position="266">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2995#2996#0" expanded="true" />
-            <element signature="e#3063#3064#0" expanded="true" />
+            <element signature="e#173#174#0" expanded="true" />
+            <element signature="e#210#211#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/IoCContextImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2884">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/IoCContextImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="723">
-          <caret line="132" column="36" lean-forward="true" selection-start-line="132" selection-start-column="36" selection-end-line="132" selection-end-column="36" />
+        <state relative-caret-position="498">
+          <caret line="206" selection-start-line="206" selection-end-line="206" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
