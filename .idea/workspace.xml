@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b40e55d4-de1b-46dd-b068-906daf612ff6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/BeanContainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ClosableStateReference.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MyClosableType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/IoCContextImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/IoCContextImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BeanContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BeanContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/IoCContextImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IoCContextImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/IoCContextImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IoCContextImplTest.java" afterDir="false" />
     </list>
@@ -38,37 +39,40 @@
         <counts>
           <entry key="gradle" value="9" />
           <entry key="gradlew" value="1" />
-          <entry key="java" value="587" />
+          <entry key="java" value="686" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Groovy" value="9" />
-          <entry key="JAVA" value="587" />
+          <entry key="JAVA" value="686" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="21" />
-          <entry key="java" value="5132" />
+          <entry key="java" value="6421" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5132" />
+          <entry key="JAVA" value="6421" />
           <entry key="PLAIN_TEXT" value="21" />
         </counts>
       </usages-collector>
     </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="test" />
   </component>
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/IoCContextImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="206" selection-start-line="206" selection-end-line="206" />
+            <state relative-caret-position="427">
+              <caret line="211" column="21" lean-forward="true" selection-start-line="211" selection-start-column="21" selection-end-line="211" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,6 +95,7 @@
     <findStrings>
       <find>throw</find>
       <find>AC4</find>
+      <find>put</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -431,9 +436,11 @@
         <option value="$PROJECT_DIR$/src/test/java/MyBeanClassChild.java" />
         <option value="$PROJECT_DIR$/src/test/java/MyBeanClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/IoCContext.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ClosableStateReference.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MyClosableType.java" />
+        <option value="$PROJECT_DIR$/src/test/java/IoCContextImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/BeanContainer.java" />
         <option value="$PROJECT_DIR$/src/main/java/IoCContextImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/IoCContextImplTest.java" />
       </list>
     </option>
   </component>
@@ -452,86 +459,20 @@
       <autoscrollFromSource ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tw_test_ioc" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tw_test_ioc" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tw_test_ioc" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tw_test_ioc" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tw_test_ioc" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="IoCContextImpl" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tw_test_ioc" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tw_test_ioc" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tw_test_ioc" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="MyBeanClass" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="Optiona&#9;PSI&#9;JAVA://java.util.Optional&#10;g&#9;FILE&#9;file:///Users/yxlan/Documents/Code/demo/tw_test_ioc/src/main/java/Greeting.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537100705611" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537106335893" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="full.screen.before.presentation.mode" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.chrisrm.idea.config" />
@@ -557,7 +498,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.IoCContextImplTest">
+  <component name="RunManager" selected="JUnit.IoCContextImplTest.should_run_close_when_ioc_close">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -584,11 +525,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IoCContextImplTest.should_throw_when_have_annotation_but_not_register" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IoCContextImplTest.should_run_close_when_ioc_close" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test_test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="IoCContextImplTest" />
-      <option name="METHOD_NAME" value="should_throw_when_have_annotation_but_not_register" />
+      <option name="METHOD_NAME" value="should_run_close_when_ioc_close" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -632,19 +573,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.IoCContextImplTest.should_throw_when_have_annotation_but_not_register" />
       <item itemvalue="JUnit.IoCContextImplTest.should_throw_when_have_one_annotation_but_not_register" />
       <item itemvalue="JUnit.IoCContextImplTest" />
       <item itemvalue="JUnit.IoCContextImplTest.should_create_instance_by_interface" />
       <item itemvalue="JUnit.IoCContextImplTest.should_use_after_class_when_have_repair_class" />
+      <item itemvalue="JUnit.IoCContextImplTest.should_run_close_when_ioc_close" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IoCContextImplTest.should_run_close_when_ioc_close" />
         <item itemvalue="JUnit.IoCContextImplTest" />
         <item itemvalue="JUnit.IoCContextImplTest.should_use_after_class_when_have_repair_class" />
         <item itemvalue="JUnit.IoCContextImplTest.should_create_instance_by_interface" />
         <item itemvalue="JUnit.IoCContextImplTest.should_throw_when_have_one_annotation_but_not_register" />
-        <item itemvalue="JUnit.IoCContextImplTest.should_throw_when_have_annotation_but_not_register" />
       </list>
     </recent_temporary>
   </component>
@@ -663,44 +604,44 @@
       <workItem from="1536980065961" duration="840000" />
       <workItem from="1537002433021" duration="10041000" />
       <workItem from="1537097154163" duration="897000" />
-      <workItem from="1537098267147" duration="2089000" />
+      <workItem from="1537098267147" duration="7432000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="IoCContextImplTest_should_throw_when_have_annotation_but_not_register - 2018.09.16 at 19h 53m 42s.xml">
-      <configuration name="IoCContextImplTest.should_throw_when_have_annotation_but_not_register" configurationId="JUnit" />
+    <history-entry file="IoCContextImplTest_should_run_close_when_ioc_close - 2018.09.16 at 21h 54m 15s.xml">
+      <configuration name="IoCContextImplTest.should_run_close_when_ioc_close" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IoCContextImplTest_should_throw_when_have_annotation_but_not_register - 2018.09.16 at 19h 53m 46s.xml">
-      <configuration name="IoCContextImplTest.should_throw_when_have_annotation_but_not_register" configurationId="JUnit" />
+    <history-entry file="IoCContextImplTest_should_run_close_when_ioc_close - 2018.09.16 at 21h 54m 19s.xml">
+      <configuration name="IoCContextImplTest.should_run_close_when_ioc_close" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IoCContextImplTest_should_throw_when_have_one_annotation_but_not_register - 2018.09.16 at 19h 54m 15s.xml">
-      <configuration name="IoCContextImplTest.should_throw_when_have_one_annotation_but_not_register" configurationId="JUnit" />
+    <history-entry file="IoCContextImplTest_should_run_close_when_ioc_close - 2018.09.16 at 21h 54m 23s.xml">
+      <configuration name="IoCContextImplTest.should_run_close_when_ioc_close" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IoCContextImplTest - 2018.09.16 at 19h 59m 08s.xml">
-      <configuration name="IoCContextImplTest" configurationId="JUnit" />
+    <history-entry file="IoCContextImplTest_should_run_close_when_ioc_close - 2018.09.16 at 21h 54m 35s.xml">
+      <configuration name="IoCContextImplTest.should_run_close_when_ioc_close" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IoCContextImplTest_should_create_instance_by_interface - 2018.09.16 at 20h 05m 23s.xml">
-      <configuration name="IoCContextImplTest.should_create_instance_by_interface" configurationId="JUnit" />
+    <history-entry file="IoCContextImplTest_should_run_close_when_ioc_close - 2018.09.16 at 21h 54m 54s.xml">
+      <configuration name="IoCContextImplTest.should_run_close_when_ioc_close" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IoCContextImplTest_should_use_after_class_when_have_repair_class - 2018.09.16 at 20h 07m 09s.xml">
-      <configuration name="IoCContextImplTest.should_use_after_class_when_have_repair_class" configurationId="JUnit" />
+    <history-entry file="IoCContextImplTest_should_run_close_when_ioc_close - 2018.09.16 at 21h 55m 39s.xml">
+      <configuration name="IoCContextImplTest.should_run_close_when_ioc_close" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IoCContextImplTest - 2018.09.16 at 20h 07m 14s.xml">
-      <configuration name="IoCContextImplTest" configurationId="JUnit" />
+    <history-entry file="IoCContextImplTest_should_run_close_when_ioc_close - 2018.09.16 at 21h 56m 43s.xml">
+      <configuration name="IoCContextImplTest.should_run_close_when_ioc_close" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IoCContextImplTest - 2018.09.16 at 20h 11m 15s.xml">
-      <configuration name="IoCContextImplTest" configurationId="JUnit" />
+    <history-entry file="IoCContextImplTest_should_run_close_when_ioc_close - 2018.09.16 at 21h 56m 46s.xml">
+      <configuration name="IoCContextImplTest.should_run_close_when_ioc_close" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IoCContextImplTest - 2018.09.16 at 20h 16m 36s.xml">
-      <configuration name="IoCContextImplTest" configurationId="JUnit" />
+    <history-entry file="IoCContextImplTest_should_run_close_when_ioc_close - 2018.09.16 at 21h 56m 54s.xml">
+      <configuration name="IoCContextImplTest.should_run_close_when_ioc_close" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IoCContextImplTest - 2018.09.16 at 20h 16m 55s.xml">
-      <configuration name="IoCContextImplTest" configurationId="JUnit" />
+    <history-entry file="IoCContextImplTest_should_run_close_when_ioc_close - 2018.09.16 at 21h 57m 46s.xml">
+      <configuration name="IoCContextImplTest.should_run_close_when_ioc_close" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29487000" />
+    <option name="totallyTimeSpent" value="34830000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -710,14 +651,14 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Favorites" order="4" side_tool="true" weight="0.3297568" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.3288889" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.3288889" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.3988889" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -741,18 +682,18 @@
       <window_info anchor="right" id="Theme Preview" order="12" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23390558" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.23390558" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Favorites" order="4" side_tool="true" weight="0.3297568" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="UI Designer" order="6" />
-      <window_info anchor="bottom" id="Messages" order="0" visible="true" weight="0.32923833" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.3288889" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.3288889" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="4" visible="true" weight="0.3992629" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -787,15 +728,62 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/IoCContextImpl.java</url>
-          <line>36</line>
+          <line>37</line>
           <properties />
           <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/IoCContextImpl.java</url>
+          <line>111</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/IoCContextImpl.java</url>
+          <line>107</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/IoCContextImpl.java</url>
+          <line>106</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/IoCContextImpl.java</url>
+          <line>104</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/BeanContainer.java</url>
+          <line>10</line>
+          <properties />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/BeanContainer.java</url>
+          <line>16</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/IoCContextImpl.java</url>
+          <line>84</line>
+          <properties />
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>types[0].getTypeName()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>resolveClazz.getDeclaredFields()[0].getAnnotations()</expression-string>
         <language-id>JAVA</language-id>
@@ -833,11 +821,6 @@
       </expression>
       <expression>
         <expression-string>resolveClazz.getConstructor()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>resolveClazz.getAnnotations()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -971,17 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="3411" column="36" selection-start-line="3411" selection-start-column="36" selection-end-line="3411" selection-end-column="36" />
-          <folding>
-            <element signature="e#139547#139548#0" expanded="true" />
-            <element signature="e#139624#139625#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CreateOnTheFly.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -1036,13 +1008,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.2.0/bf6544529adb99bb5b81454f44ab69f5935be4af/junit-platform-commons-1.2.0-sources.jar!/org/junit/platform/commons/util/ReflectionUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="512" selection-start-line="512" selection-end-line="512" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/IoCContext.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1050,22 +1015,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BeanContainer.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ClosableStateReference.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        <state relative-caret-position="304">
+          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#173#174#0" expanded="true" />
-            <element signature="e#210#211#0" expanded="true" />
+            <element signature="e#123#124#0" expanded="true" />
+            <element signature="e#154#155#0" expanded="true" />
+            <element signature="e#181#182#0" expanded="true" />
+            <element signature="e#212#213#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MyClosableType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding>
+            <element signature="e#84#85#0" expanded="true" />
+            <element signature="e#114#115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="802">
+          <caret line="910" column="18" selection-start-line="910" selection-start-column="18" selection-end-line="910" selection-end-column="18" />
+          <folding>
+            <element signature="e#139547#139548#0" expanded="true" />
+            <element signature="e#139624#139625#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.2.0/bf6544529adb99bb5b81454f44ab69f5935be4af/junit-platform-commons-1.2.0-sources.jar!/org/junit/platform/commons/util/ReflectionUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="515" selection-start-line="515" selection-end-line="515" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/reflect/Type.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/IoCContextImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2884">
-          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+        <state relative-caret-position="331">
+          <caret line="84" column="41" selection-start-line="84" selection-start-column="41" selection-end-line="84" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BeanContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1074,8 +1086,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/IoCContextImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="206" selection-start-line="206" selection-end-line="206" />
+        <state relative-caret-position="427">
+          <caret line="211" column="21" lean-forward="true" selection-start-line="211" selection-start-column="21" selection-end-line="211" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1134,7 +1146,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>test_main|test</last-edited>
+          <last-edited>test_test|test</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1159,7 +1171,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Gradle: junit:junit:4.12</last-edited>
+          <last-edited>Gradle: com.fasterxml.jackson.core:jackson-annotations:2.9.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

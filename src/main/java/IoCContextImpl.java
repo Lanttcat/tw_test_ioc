@@ -1,11 +1,12 @@
-import java.lang.reflect.Array;
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
+import sun.rmi.rmic.iiop.InterfaceType;
+
+import java.lang.reflect.*;
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class IoCContextImpl implements IoCContext {
-    private static HashMap<Class, Class> classStorage = new BeanContainer().getContainer();
+    private static BeanContainer beanContainer = new BeanContainer();
+    private static HashMap<Class, Class> classStorage = beanContainer.getContainer();
     private boolean isClose = false;
 
     @Override
@@ -81,6 +82,7 @@ public class IoCContextImpl implements IoCContext {
                 }
             }
         }
+        this.beanContainer.putToInstance(resolveClazz, instance);
         return instance;
     }
 
@@ -97,6 +99,27 @@ public class IoCContextImpl implements IoCContext {
 
     @Override
     public void close() throws Exception {
+        HashMap<Class, List<Object>> reverse = this.beanContainer.reverseInstance();
 
+        reverse.forEach((key, value) -> {
+            Type[] types = key.getInterfaces();
+            for (int index = 0; index < types.length; index++) {
+                Type type = types[index];
+                if (type.getTypeName() == "java.lang.AutoCloseable") {
+                    try {
+                        List<Object>  objects = reverse.get(key);
+                        for (Object object : objects) {
+                            AutoCloseable closeable = (AutoCloseable)object;
+                            closeable.close();
+                        }
+                        Method closeMethod = key.getMethod("close");
+                    } catch (NoSuchMethodException e) {
+                        e.printStackTrace();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
     }
 }
