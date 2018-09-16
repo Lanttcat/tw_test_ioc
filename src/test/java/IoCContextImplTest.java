@@ -1,6 +1,5 @@
 import org.junit.jupiter.api.Test;
 
-import java.lang.management.MemoryManagerMXBean;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
@@ -214,38 +213,42 @@ public class IoCContextImplTest {
     }
 
     @Test
-    void should_run_close_by_order_when_context_close() throws Exception {
+    void should_run_close_by_order_when_context_close() {
         context.registerBean(ClosableStateReference.class);
 
         ClosableStateReference closableStateReference1 = context.getBean(ClosableStateReference.class);
         ClosableStateReference closableStateReference2 = context.getBean(ClosableStateReference.class);
 
-        context.close();
-        assertIterableEquals(ClosableStateReference.getStrings(),
-                Arrays.asList(closableStateReference2.toString(), closableStateReference1.toString()));
+        try {
+            context.close();
+            assertIterableEquals(ClosableStateReference.getStrings(),
+                    Arrays.asList(closableStateReference2.toString(), closableStateReference1.toString()));
+        } catch (Exception e) {}
     }
 
     @Test
     void should_finish_when_some_close_have_error() {
         context.registerBean(ClosableStateReference.class);
-        context.registerBean(ClosableStateReferenceError.class);
+        context.registerBean(CloseError.class);
 
         ClosableStateReference closableStateReference = context.getBean(ClosableStateReference.class);
-        ClosableStateReferenceError closableStateReferenceError = context.getBean(ClosableStateReferenceError.class);
+        CloseError closeError = context.getBean(CloseError.class);
+        ClosableStateReference closableStateReference1 = context.getBean(ClosableStateReference.class);
 
         try {
             context.close();
         } catch (Exception e) {}
         assertEquals(true, closableStateReference.isClosed());
+        assertEquals(true, closableStateReference1.isClosed());
     }
 
     @Test
     void should_finish_and_throw_when_some_close_have_error() {
         context.registerBean(ClosableStateReference.class);
-        context.registerBean(ClosableStateReferenceError.class);
+        context.registerBean(CloseError.class);
 
         ClosableStateReference closableStateReference = context.getBean(ClosableStateReference.class);
-        ClosableStateReferenceError closableStateReferenceError = context.getBean(ClosableStateReferenceError.class);
+        CloseError closeError = context.getBean(CloseError.class);
 
         try {
             context.close();

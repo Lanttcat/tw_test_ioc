@@ -62,13 +62,7 @@ public class IoCContextImpl implements IoCContext {
             return null;
         }
 
-        List<Field> fields = new ArrayList<>();
-        superClass = resolveClazz;
-        while (superClass != Object.class) {
-            fields.addAll(Arrays.asList(superClass.getDeclaredFields()));
-            superClass = superClass.getSuperclass();
-        }
-        Collections.reverse(fields);
+        List<Field> fields = getFields(resolveClazz);
 
         for (Field field : fields) {
             if (field.getAnnotation(CreateOnTheFly.class) != null) {
@@ -84,6 +78,18 @@ public class IoCContextImpl implements IoCContext {
         }
         this.beanContainer.putToInstance(resolveClazz, instance);
         return instance;
+    }
+
+    private <T> List<Field> getFields(Class<? super T> resolveClazz) {
+        Class superClass;
+        List<Field> fields = new ArrayList<>();
+        superClass = resolveClazz;
+        while (superClass != Object.class) {
+            fields.addAll(Arrays.asList(superClass.getDeclaredFields()));
+            superClass = superClass.getSuperclass();
+        }
+        Collections.reverse(fields);
+        return fields;
     }
 
     private void isNullClass(boolean b) {
@@ -104,23 +110,25 @@ public class IoCContextImpl implements IoCContext {
         List<Exception> exceptions = new ArrayList<>();
 
         reverse.forEach((key, value) -> {
-            Type[] types = key.getInterfaces();
+            Type[] types = key.getGenericInterfaces();
             for (int index = 0; index < types.length; index++) {
                 Type type = types[index];
                 if (type.getTypeName() == "java.lang.AutoCloseable") {
-                    try {
-                        List<Object>  objects = reverse.get(key);
-                        for (int objIndex = objects.size() - 1; objIndex >= 0; objIndex--) {
-                            AutoCloseable closeable = (AutoCloseable)objects.get(objIndex);
+                    List<Object>  objects = reverse.get(key);
+                    for (int objIndex = objects.size() - 1; objIndex >= 0; objIndex--) {
+                        AutoCloseable closeable = (AutoCloseable)objects.get(objIndex);
+                        try {
                             closeable.close();
+                        } catch (Exception e) {
+                            exceptions.add(e);
+                            e.getStackTrace();
                         }
-                    } catch (Exception e) {
-                        exceptions.add(e);
                     }
                 }
             }
         });
-
-        throw exceptions.get(0);
+        if (exceptions.size() > 0) {
+            throw exceptions.get(0);
+        }
     }
 }
