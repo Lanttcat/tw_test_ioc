@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b40e55d4-de1b-46dd-b068-906daf612ff6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/IoCContextImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/IoCContextImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/IoCContextImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/IoCContextImplTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/IoCContextImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IoCContextImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ClosableStateReferenceError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CloseError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/IoCContextImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IoCContextImplTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -40,25 +35,25 @@
         <counts>
           <entry key="gradle" value="9" />
           <entry key="gradlew" value="1" />
-          <entry key="java" value="818" />
+          <entry key="java" value="824" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Groovy" value="9" />
-          <entry key="JAVA" value="818" />
+          <entry key="JAVA" value="824" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="21" />
-          <entry key="java" value="7386" />
+          <entry key="java" value="7387" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7386" />
+          <entry key="JAVA" value="7387" />
           <entry key="PLAIN_TEXT" value="21" />
         </counts>
       </usages-collector>
@@ -470,7 +465,7 @@
     <property name="SearchEverywhereHistoryKey" value="Optiona&#9;PSI&#9;JAVA://java.util.Optional&#10;g&#9;FILE&#9;file:///Users/yxlan/Documents/Code/demo/tw_test_ioc/src/main/java/Greeting.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537112268432" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537112541232" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="full.screen.before.presentation.mode" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
@@ -611,20 +606,11 @@
       <workItem from="1537097154163" duration="897000" />
       <workItem from="1537098267147" duration="10729000" />
       <workItem from="1537109661112" duration="17000" />
-      <workItem from="1537109730165" duration="1902000" />
+      <workItem from="1537109730165" duration="2291000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="IoCContextImplTest - 2018.09.16 at 23h 25m 52s.xml">
-      <configuration name="IoCContextImplTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IoCContextImplTest_should_create_instance_by_interface - 2018.09.16 at 23h 26m 51s.xml">
-      <configuration name="IoCContextImplTest.should_create_instance_by_interface" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IoCContextImplTest - 2018.09.16 at 23h 27m 31s.xml">
-      <configuration name="IoCContextImplTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="IoCContextImplTest - 2018.09.16 at 23h 28m 06s.xml">
       <configuration name="IoCContextImplTest" configurationId="JUnit" />
     </history-entry>
@@ -646,9 +632,18 @@
     <history-entry file="IoCContextImplTest - 2018.09.16 at 23h 33m 01s.xml">
       <configuration name="IoCContextImplTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="IoCContextImplTest - 2018.09.16 at 23h 35m 52s.xml">
+      <configuration name="IoCContextImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IoCContextImplTest - 2018.09.16 at 23h 36m 38s.xml">
+      <configuration name="IoCContextImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IoCContextImplTest - 2018.09.16 at 23h 37m 50s.xml">
+      <configuration name="IoCContextImplTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40046000" />
+    <option name="totallyTimeSpent" value="40435000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -664,7 +659,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.3288889" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.32777777" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.32777777" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39777777" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -1022,8 +1017,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/IoCContextImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+        <state relative-caret-position="383">
+          <caret line="71" column="40" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

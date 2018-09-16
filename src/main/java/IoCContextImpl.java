@@ -64,6 +64,12 @@ public class IoCContextImpl implements IoCContext {
 
         List<Field> fields = getFields(resolveClazz);
 
+        addInstanceForExtend(instance, fields);
+        this.beanContainer.putToInstance(resolveClazz, instance);
+        return instance;
+    }
+
+    private <T> void addInstanceForExtend(T instance, List<Field> fields) {
         for (Field field : fields) {
             if (field.getAnnotation(CreateOnTheFly.class) != null) {
                 Class<?> classType = field.getType();
@@ -76,8 +82,6 @@ public class IoCContextImpl implements IoCContext {
                 }
             }
         }
-        this.beanContainer.putToInstance(resolveClazz, instance);
-        return instance;
     }
 
     private <T> List<Field> getFields(Class<? super T> resolveClazz) {
@@ -114,21 +118,25 @@ public class IoCContextImpl implements IoCContext {
             for (int index = 0; index < types.length; index++) {
                 Type type = types[index];
                 if (type.getTypeName() == "java.lang.AutoCloseable") {
-                    List<Object>  objects = reverse.get(key);
-                    for (int objIndex = objects.size() - 1; objIndex >= 0; objIndex--) {
-                        AutoCloseable closeable = (AutoCloseable)objects.get(objIndex);
-                        try {
-                            closeable.close();
-                        } catch (Exception e) {
-                            exceptions.add(e);
-                            e.getStackTrace();
-                        }
-                    }
+                    runClose(reverse, exceptions, key);
                 }
             }
         });
         if (exceptions.size() > 0) {
             throw exceptions.get(0);
+        }
+    }
+
+    private void runClose(HashMap<Class, List<Object>> reverse, List<Exception> exceptions, Class key) {
+        List<Object>  objects = reverse.get(key);
+        for (int objIndex = objects.size() - 1; objIndex >= 0; objIndex--) {
+            AutoCloseable closeable = (AutoCloseable)objects.get(objIndex);
+            try {
+                closeable.close();
+            } catch (Exception e) {
+                exceptions.add(e);
+                e.getStackTrace();
+            }
         }
     }
 }
