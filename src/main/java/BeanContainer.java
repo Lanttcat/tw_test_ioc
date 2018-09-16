@@ -7,19 +7,14 @@ public class BeanContainer extends HashMap<Class, Class> {
     private HashMap<Class, List<Object>> instances = new LinkedHashMap<>();
 
     public void putToInstance(Class key, Object obj) {
+        List<Object>  list = new ArrayList<>();
         if (instances.containsKey(key)) {
-            List<Object> list = instances.get(key);
-            list.add(obj);
-            instances.put(key, list);
+            list = instances.get(key);
         } else {
-            List<Object> list = new ArrayList<>();
             list.add(obj);
-            instances.put(key, list);
         }
-    }
-
-    public HashMap<Class, List<Object>> getInstances() {
-        return instances;
+        list.add(obj);
+        instances.put(key, list);
     }
 
     public HashMap<Class, List<Object>> reverseInstance() {
@@ -39,5 +34,9 @@ public class BeanContainer extends HashMap<Class, Class> {
 
     public HashMap<Class, Class> getContainer() {
         return container;
+    }
+
+    public HashMap<Class, List<Object>> getInstances() {
+        return instances;
     }
 }
