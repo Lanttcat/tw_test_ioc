@@ -18,8 +18,8 @@ public class BeanContainer extends HashMap<Class, Class> {
         }
     }
 
-    public void putToContainer(Class key, Object value) {
-
+    public HashMap<Class, List<Object>> getInstances() {
+        return instances;
     }
 
     public HashMap<Class, List<Object>> reverseInstance() {

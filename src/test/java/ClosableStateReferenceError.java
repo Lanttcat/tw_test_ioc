@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClosableStateReference implements AutoCloseable{
+public class ClosableStateReferenceError implements AutoCloseable {
     static List<String> strings = new ArrayList<>();
 
     private boolean isClosed;
@@ -15,7 +15,7 @@ public class ClosableStateReference implements AutoCloseable{
     }
 
     public void close() {
-        strings.add(this.toString());
-        isClosed = true;
+        throw new IllegalStateException();
     }
+
 }

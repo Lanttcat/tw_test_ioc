@@ -2,6 +2,7 @@ import org.junit.jupiter.api.Test;
 
 import java.lang.management.MemoryManagerMXBean;
 import java.lang.reflect.Array;
+import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -210,5 +211,46 @@ public class IoCContextImplTest {
         context.close();
 
         assertEquals(true, myClosableType.isClose);
+    }
+
+    @Test
+    void should_run_close_by_order_when_context_close() throws Exception {
+        context.registerBean(ClosableStateReference.class);
+
+        ClosableStateReference closableStateReference1 = context.getBean(ClosableStateReference.class);
+        ClosableStateReference closableStateReference2 = context.getBean(ClosableStateReference.class);
+
+        context.close();
+        assertIterableEquals(ClosableStateReference.getStrings(),
+                Arrays.asList(closableStateReference2.toString(), closableStateReference1.toString()));
+    }
+
+    @Test
+    void should_finish_when_some_close_have_error() {
+        context.registerBean(ClosableStateReference.class);
+        context.registerBean(ClosableStateReferenceError.class);
+
+        ClosableStateReference closableStateReference = context.getBean(ClosableStateReference.class);
+        ClosableStateReferenceError closableStateReferenceError = context.getBean(ClosableStateReferenceError.class);
+
+        try {
+            context.close();
+        } catch (Exception e) {}
+        assertEquals(true, closableStateReference.isClosed());
+    }
+
+    @Test
+    void should_finish_and_throw_when_some_close_have_error() {
+        context.registerBean(ClosableStateReference.class);
+        context.registerBean(ClosableStateReferenceError.class);
+
+        ClosableStateReference closableStateReference = context.getBean(ClosableStateReference.class);
+        ClosableStateReferenceError closableStateReferenceError = context.getBean(ClosableStateReferenceError.class);
+
+        try {
+            context.close();
+        } catch (Exception e) {
+            assertEquals(IllegalStateException.class, e.getClass());
+        }
     }
 }

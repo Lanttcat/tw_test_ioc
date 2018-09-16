@@ -101,6 +101,8 @@ public class IoCContextImpl implements IoCContext {
     public void close() throws Exception {
         HashMap<Class, List<Object>> reverse = this.beanContainer.reverseInstance();
 
+        List<Exception> exceptions = new ArrayList<>();
+
         reverse.forEach((key, value) -> {
             Type[] types = key.getInterfaces();
             for (int index = 0; index < types.length; index++) {
@@ -108,18 +110,17 @@ public class IoCContextImpl implements IoCContext {
                 if (type.getTypeName() == "java.lang.AutoCloseable") {
                     try {
                         List<Object>  objects = reverse.get(key);
-                        for (Object object : objects) {
-                            AutoCloseable closeable = (AutoCloseable)object;
+                        for (int objIndex = objects.size() - 1; objIndex >= 0; objIndex--) {
+                            AutoCloseable closeable = (AutoCloseable)objects.get(objIndex);
                             closeable.close();
                         }
-                        Method closeMethod = key.getMethod("close");
-                    } catch (NoSuchMethodException e) {
-                        e.printStackTrace();
                     } catch (Exception e) {
-                        e.printStackTrace();
+                        exceptions.add(e);
                     }
                 }
             }
         });
+
+        throw exceptions.get(0);
     }
 }
