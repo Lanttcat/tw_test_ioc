@@ -48,9 +48,11 @@ public class IoCContextImpl implements IoCContext {
         if (resolveClazz == null) throw new IllegalArgumentException();
 
         if (!this.classStorage.containsKey(resolveClazz)) throw new IllegalStateException();
+
         try {
             if (isAnAbstractClass(resolveClazz)) {
-                instance = (T)this.classStorage.get(resolveClazz).newInstance();
+                resolveClazz = classStorage.get(resolveClazz);
+                instance = (T) resolveClazz.newInstance();
             } else {
                 instance = (T)resolveClazz.newInstance();
             }
@@ -91,5 +93,10 @@ public class IoCContextImpl implements IoCContext {
 
     private boolean isAnAbstractClass(Class<?> beanClazz) {
         return Modifier.isAbstract(beanClazz.getModifiers());
+    }
+
+    @Override
+    public void close() throws Exception {
+
     }
 }
